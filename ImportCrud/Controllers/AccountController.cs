@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ImportCrud.Models;
+using ImportCrud.ViewModel;
 
 namespace ImportCrud.Controllers
 {
