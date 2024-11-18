@@ -1,0 +1,97 @@
+﻿@model ImportCrud.ViewModel.Imports.ImportFormViewModel
+
+@{
+    ViewBag.Title = "Create Import";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container mt-4">
+    @using (Html.BeginForm("Create", "Import", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.HiddenFor(m => m.Id)
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Code" class="form-label">Code</label>
+                    @Html.TextBoxFor(m => m.Code, new { @class = "form-control", placeholder = "Enter import code" })
+                    @Html.ValidationMessageFor(m => m.Code, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-6">
+                    <label for="Company" class="form-label">Company</label>
+                    @Html.TextBoxFor(m => m.Company, new { @class = "form-control", placeholder = "Enter company name" })
+                    @Html.ValidationMessageFor(m => m.Company, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Origin" class="form-label">Origin</label>
+                    @Html.TextBoxFor(m => m.Origin, new { @class = "form-control", placeholder = "Enter origin location" })
+                    @Html.ValidationMessageFor(m => m.Origin, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-6">
+                    <label for="Destination" class="form-label">Destination</label>
+                    @Html.TextBoxFor(m => m.Destination, new { @class = "form-control", placeholder = "Enter destination location" })
+                    @Html.ValidationMessageFor(m => m.Destination, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="TotalValue" class="form-label">Total Value</label>
+                    @Html.TextBoxFor(m => m.TotalValue, new { @class = "form-control", type = "number", step = "0.01", placeholder = "Enter total value" })
+                    @Html.ValidationMessageFor(m => m.TotalValue, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-6">
+                    <label for="Active" class="form-label">Active</label>
+                    <div class="form-check">
+                        @Html.CheckBoxFor(m => m.Active, new { @class = "form-check-input" })
+                        <label class="form-check-label" for="Active">Is Active?</label>
+                        @Html.ValidationMessageFor(m => m.Active, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="ProcessDate" class="form-label">Process Date</label>
+                    @Html.TextBoxFor(m => m.ProcessDate, new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(m => m.ProcessDate, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-4">
+                    <label for="EstimatedTimeDeparture" class="form-label">Estimated Departure</label>
+                    @Html.TextBoxFor(m => m.EstimatedTimeDeparture, new { @class = "form-control", type = "datetime-local" })
+                    @Html.ValidationMessageFor(m => m.EstimatedTimeDeparture, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-4">
+                    <label for="EstimatedTimeArrival" class="form-label">Estimated Arrival</label>
+                    @Html.TextBoxFor(m => m.EstimatedTimeArrival, new { @class = "form-control", type = "datetime-local" })
+                    @Html.ValidationMessageFor(m => m.EstimatedTimeArrival, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary">
+                <text>Create</text>
+            </button>
+            <a href="@Url.Action("Index", "Import")" class="btn btn-secondary">Cancel</a>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,19 @@
+@model ImportCrud.ViewModel.Imports.ImportDeleteViewModel
+
+<h2>Delete Import</h2>
+
+<p>Are you sure you want to delete this?</p>
+
+<p>
+    <strong>Code:</strong> @Model.Code <br />
+    <strong>Company:</strong> @Model.Company <br />
+</p>
+
+@using (Html.BeginForm("DeleteConfirmed", "Import"))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.Id)
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+}

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ImportCrud.ViewModel.Imports.ImportIndexViewModel>
+
+<h2>Imports</h2>
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Company</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Total Value</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var import in Model)
+        {
+            <tr>
+                <td>@import.Code</td>
+                <td>@import.Company</td>
+                <td>@import.Origin</td>
+                <td>@import.Destination</td>
+                <td>@import.TotalValue</td>
+                <td>
+                    <a href="@Url.Action("Details", new { id = import.Id })">Details</a> |
+                    <a href="@Url.Action("Edit", new { id = import.Id })">Edit</a> |
+                    <a href="@Url.Action("Delete", new { id = import.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

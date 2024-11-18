@@ -1,0 +1,19 @@
+@model ImportCrud.ViewModel.Imports.ImportDetailsViewModel
+
+<h2>Import Details</h2>
+
+<p>
+    <strong>Code:</strong> @Model.Code <br />
+    <strong>Company:</strong> @Model.Company <br />
+    <strong>Origin:</strong> @Model.Origin <br />
+    <strong>Destination:</strong> @Model.Destination <br />
+    <strong>Total Value:</strong> @Model.TotalValue <br />
+    <strong>Active:</strong> @(Model.Active ? "Yes" : "No") <br />
+    <strong>Process Date:</strong> @Model.ProcessDate.ToShortDateString() <br />
+    <strong>Estimated Time Departure:</strong> @Model.EstimatedTimeDeparture <br />
+    <strong>Estimated Time Arrival:</strong> @Model.EstimatedTimeArrival <br />
+</p>
+
+<p>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+</p>
