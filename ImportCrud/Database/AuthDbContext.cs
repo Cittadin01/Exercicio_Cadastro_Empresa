@@ -5,8 +5,7 @@ namespace ImportCrud.Database
 {
     public class AuthDbContext : IdentityDbContext<ApplicationUser>
     {
-        public AuthDbContext()
-            : base("DbConnection", throwIfV1Schema: false)
+        public AuthDbContext() : base("DbConnection", throwIfV1Schema: false)
         {
         }
 

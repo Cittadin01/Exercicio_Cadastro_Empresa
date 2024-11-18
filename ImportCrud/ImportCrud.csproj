@@ -26,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+	<MvcBuildViews>True</MvcBuildViews>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -186,6 +187,10 @@
     <Compile Include="Migrations\ImportCrud\202411171408494_InitialCreate.Designer.cs">
       <DependentUpon>202411171408494_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ImportCrud\202411181026467_Alter_Cnpj_Company.cs" />
+    <Compile Include="Migrations\ImportCrud\202411181026467_Alter_Cnpj_Company.Designer.cs">
+      <DependentUpon>202411181026467_Alter_Cnpj_Company.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ImportCrud\ConfigurationImportCrud.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Imports\Import.cs" />
@@ -302,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ImportCrud\202411171408494_InitialCreate.resx">
       <DependentUpon>202411171408494_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ImportCrud\202411181026467_Alter_Cnpj_Company.resx">
+      <DependentUpon>202411181026467_Alter_Cnpj_Company.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

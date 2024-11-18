@@ -4,9 +4,9 @@ namespace ImportCrud.Models.Imports
 {
     public class Import
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Code { get; set; }
-        public string Cnpj { get; set; }
+        public string Company { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }
         public decimal TotalValue { get; set; }

@@ -14,9 +14,9 @@ namespace ImportCrud.Database.Seed
             {
                 new Import
                 {
-                    ID = 1,
+                    Id = 1,
                     Code = "IMP2024A001",
-                    Cnpj = "12.345.678/0001-90",
+                    Company = "Shanghai Export Co., Ltd.",
                     Origin = "Shanghai, China",
                     Destination = "New York, USA",
                     TotalValue = 50000.75m,
@@ -27,9 +27,9 @@ namespace ImportCrud.Database.Seed
                 },
                 new Import
                 {
-                    ID = 2,
+                    Id = 2,
                     Code = "IMP2024A002",
-                    Cnpj = "98.765.432/0001-09",
+                    Company = "Hamburg Logistics GmbH",
                     Origin = "Hamburg, Germany",
                     Destination = "Rio de Janeiro, Brazil",
                     TotalValue = 125000.00m,
