@@ -1,0 +1,36 @@
+@model IEnumerable<CadastroEmpresa.ViewModel.Company.CompanyIndexModel>
+
+<h2>Empresa</h2>
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Cnpj</th>
+            <th>Nome</th>
+            <th>País</th>
+            <th>Endereço</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var company in Model)
+        {
+            <tr>
+                <td>@company.Code</td>
+                <td>@company.Company</td>
+                <td>@company.Origin</td>
+                <td>@company.Destination</td>
+                <td>@company.TotalValue</td>
+                <td>
+                    <a href="@Url.Action("Details", new { id = company.Id })">Details</a> |
+                    <a href="@Url.Action("Edit", new { id = company.Id })">Edit</a> |
+                    <a href="@Url.Action("Delete", new { id = company.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
