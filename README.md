@@ -12,6 +12,8 @@
 ## 👀 Overview
 
 <div>
+  <img src="https://github.com/user-attachments/assets/ebc4336a-9c19-48cf-97c0-6140d90d2dba" />
+  <img src="https://github.com/user-attachments/assets/62413817-5445-42b8-8c33-b2a9202e6f0e" />
 </div>
 
 ## 📖 About
@@ -23,18 +25,20 @@ ImportCrud is an ASP.NET MVC application targeting .NET Framework 4.8.1. The app
 - [.NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
 - [SQL Server](https://www.microsoft.com/en/sql-server/sql-server-downloads)
 - [Entity Framework 6](https://learn.microsoft.com/en-us/ef/ef6/)
+- [Bootstrap 5](https://getbootstrap.com/)
 
 ## 🚶‍♂️ Installing and Running
 
 > If you haven't downloaded .NET Framework 4.8.1 yet you can download it here [Download .NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481)
+> 
 > You can download SQL Server here [SQL Server Downloads | Microsoft](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) and SQL Server Management Studio here [Download SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
 1.  Clone this repository `git clone https://github.com/pferreirafabricio/aspnet-mvc-import-crud.git`
 2.  Open the solution `ImportCrud/ImportCrud.sln` in Visual Studio
 3.  Restore the Nuget packages
-4.  Build the project
-5.  Change the connection string in `ImportCrud/Web.config`
-6.  Run the following commands to update the database
+4.  Change the connection string in `ImportCrud/Web.config`
+5.  Build the project
+6.  Run the following commands in the Package manager console to update the database 
 ```bash
 Update-Database -ConfigurationTypeName ConfigurationIdentity  -Verbose
 Update-Database -ConfigurationTypeName ConfigurationImportCrud -Verbose
