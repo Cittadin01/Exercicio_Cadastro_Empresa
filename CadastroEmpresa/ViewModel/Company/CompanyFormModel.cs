@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace CadastroEmpresa.Models.Company
+namespace CadastroEmpresa.ViewModel.Company
 {
     public class CompanyFormModel
     {

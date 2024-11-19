@@ -1,0 +1,81 @@
+@model CadastroEmpresa.ViewModel.Company.CompanyFormModel
+
+@{
+    ViewBag.Title = "Create Company";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container mt-4">
+    @using (Html.BeginForm("Create", "Import", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.HiddenFor(m => m.Id)
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Cnpj" class="form-label">Cnpj</label>
+                    @Html.TextBoxFor(m => m.Cnpj, new { @class = "form-control", placeholder = "Enter company CNPJ" })
+                    @Html.ValidationMessageFor(m => m.Cnpj, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-6">
+                    <label for="Nome" class="form-label">Nome</label>
+                    @Html.TextBoxFor(m => m.Nome, new { @class = "form-control", placeholder = "Enter company name" })
+                    @Html.ValidationMessageFor(m => m.Nome, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="País" class="form-label">País</label>
+                    @Html.TextBoxFor(m => m.País, new { @class = "form-control", placeholder = "Enter company country" })
+                    @Html.ValidationMessageFor(m => m.País, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-6">
+                    <label for="Endereço" class="form-label">Endereço</label>
+                    @Html.TextBoxFor(m => m.Endereço, new { @class = "form-control", placeholder = "Enter company address" })
+                    @Html.ValidationMessageFor(m => m.Endereço, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Numero" class="form-label">Numero</label>
+                    @Html.TextBoxFor(m => m.Numero, new { @class = "form-control", type = "number", step = "0.01", placeholder = "Enter company address number" })
+                    @Html.ValidationMessageFor(m => m.Numero, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-6">
+                    <label for="Cep" class="form-label">Cep</label>
+                    @Html.TextBoxFor(m => m.Cep, new { @class = "form-control", placeholder = "Enter company address code" })
+                    @Html.ValidationMessageFor(m => m.Cep, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-6">
+                    <label for="Active" class="form-label">Active</label>
+                    <div class="form-check">
+                        @Html.CheckBoxFor(m => m.Active, new { @class = "form-check-input" })
+                        <label class="form-check-label" for="Active">Is Active?</label>
+                        @Html.ValidationMessageFor(m => m.Active, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary">
+                <text>Create</text>
+            </button>
+            <a href="@Url.Action("Index", "Import")" class="btn btn-secondary">Cancel</a>
+        </div>
+    }
+</div>
+

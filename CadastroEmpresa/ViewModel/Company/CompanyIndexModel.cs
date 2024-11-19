@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CadastroEmpresa.Models.Company
+namespace CadastroEmpresa.ViewModel.Company
 {
     public class CompanyIndexModel
     {

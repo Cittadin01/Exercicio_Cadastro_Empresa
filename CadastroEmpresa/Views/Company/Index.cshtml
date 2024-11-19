@@ -20,11 +20,11 @@
         @foreach (var company in Model)
         {
             <tr>
-                <td>@company.Code</td>
-                <td>@company.Company</td>
-                <td>@company.Origin</td>
-                <td>@company.Destination</td>
-                <td>@company.TotalValue</td>
+                <td>@company.Id</td>
+                <td>@company.Cnpj</td>
+                <td>@company.Nome</td>
+                <td>@company.País</td>
+                <td>@company.Endereço</td>
                 <td>
                     <a href="@Url.Action("Details", new { id = company.Id })">Details</a> |
                     <a href="@Url.Action("Edit", new { id = company.Id })">Edit</a> |

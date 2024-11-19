@@ -1,0 +1,17 @@
+@model CadastroEmpresa.ViewModel.Company.CompanyDetailModel
+
+<h2>Company Details</h2>
+
+<p>
+    <strong>Cnpj:</strong> @Model.Cnpj <br />
+    <strong>Nome:</strong> @Model.Nome <br />
+    <strong>País:</strong> @Model.País <br />
+    <strong>Endereço:</strong> @Model.Endereço <br />
+    <strong>Numero:</strong> @Model.Numero <br />
+    <strong>Cep:</strong> @Model.Cep <br />
+    <strong>Active:</strong> @(Model.Active ? "Yes" : "No") <br />
+</p>
+
+<p>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+</p>
